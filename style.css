@@ -1,9 +1,15 @@
+/* ==========================================================
+   SORELLA CUISINE - MVP STYLESHEET
+   Theme: Midnight Navy & Cream (Bespoke Brand Palette)
+   ========================================================== */
+
 /* --- CSS Variables & Reset --- */
 :root {
-    --blush-pink: #F4DCD6;
-    --warm-cocoa: #4A3728;
-    --cream-base: #FFFDF9;
+    --sorella-navy: #0B243B;   
+    --sorella-cream: #F3DCBC;  
+    --cookie-brown: #A0643B;   
     --white: #FFFFFF;
+    --off-white: #FAFAFA;
 }
 
 * {
@@ -14,13 +20,14 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--cream-base);
-    color: var(--warm-cocoa);
+    background-color: var(--off-white);
+    color: var(--sorella-navy);
     line-height: 1.6;
 }
 
 h1, h2, h3, .logo {
     font-family: 'Playfair Display', serif;
+    color: var(--sorella-navy);
 }
 
 /* --- Header & Navigation --- */
@@ -29,11 +36,16 @@ h1, h2, h3, .logo {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: var(--blush-pink);
-    color: var(--warm-cocoa);
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.site-header .logo, 
+.site-header button {
+    color: var(--sorella-cream);
 }
 
 .logo {
@@ -45,15 +57,15 @@ button {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--warm-cocoa);
     cursor: pointer;
 }
 
 .mobile-nav {
     display: none;
-    background-color: var(--cream-base);
+    background-color: var(--off-white);
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .mobile-nav.active {
@@ -66,15 +78,16 @@ button {
 
 .mobile-nav a {
     display: block;
-    padding: 0.5rem 0;
-    color: var(--warm-cocoa);
+    padding: 0.8rem 0;
+    color: var(--sorella-navy);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* --- Hero Section --- */
 .hero {
-    background-color: var(--blush-pink);
+    background-color: var(--sorella-cream);
+    color: var(--sorella-navy);
     padding: 4rem 1.5rem;
     text-align: center;
 }
@@ -109,24 +122,24 @@ button {
     transition: all 0.3s ease;
     width: 100%;
     max-width: 300px;
+    display: inline-block;
 }
 
 .btn-primary {
-    background-color: var(--warm-cocoa);
-    color: var(--white);
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--warm-cocoa);
-    border: 2px solid var(--warm-cocoa);
+    color: var(--sorella-navy);
+    border: 2px solid var(--sorella-navy);
 }
 
 .btn-card {
-    background-color: var(--blush-pink);
-    color: var(--warm-cocoa);
-    display: inline-block;
-    margin-top: 1rem;
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
+    margin-top: 1.5rem;
 }
 
 /* --- Dual Experience Cards --- */
@@ -135,26 +148,27 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    background-color: var(--off-white);
 }
 
 .card {
     background-color: var(--white);
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--blush-pink);
+    box-shadow: 0 4px 15px rgba(11, 36, 59, 0.05);
+    border-top: 4px solid var(--cookie-brown);
 }
 
 .card h2 {
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 /* --- Value Density --- */
 .value-density {
-    background-color: var(--warm-cocoa);
-    color: var(--blush-pink);
+    background-color: var(--cookie-brown);
+    color: var(--white);
     padding: 3rem 1.5rem;
     text-align: center;
 }
@@ -162,52 +176,7 @@ button {
 .value-density h3 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-}
-
-/* --- Footer --- */
-.site-footer {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    background-color: var(--blush-pink);
-    font-size: 0.9rem;
-}
-
-.site-footer a {
-    color: var(--warm-cocoa);
-    font-weight: 600;
-}
-
-/* --- Desktop Scaling --- */
-@media (min-width: 768px) {
-    .hero-actions {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .dual-experience {
-        grid-template-columns: 1fr 1fr;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-}
-
-/* --- Floating WhatsApp Button --- */
-.floating-wa {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
     color: var(--white);
-    padding: 12px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    transition: transform 0.3s ease;
-}
-
-.floating-wa:hover {
-    transform: scale(1.05);
 }
 
 /* --- Artisanal Menu Gallery --- */
@@ -219,7 +188,6 @@ button {
 
 .section-header h2 {
     font-size: 2.2rem;
-    color: var(--warm-cocoa);
     margin-bottom: 0.5rem;
 }
 
@@ -227,7 +195,7 @@ button {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     font-style: italic;
-    color: #6a5342; /* Lighter cocoa */
+    color: #4a5c6e;
 }
 
 /* --- Filter Buttons --- */
@@ -241,20 +209,21 @@ button {
 
 .filter-btn {
     padding: 0.5rem 1.2rem;
-    border: 1px solid var(--warm-cocoa);
+    border: 1px solid var(--sorella-navy);
     border-radius: 20px;
     background: transparent;
     font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.3s ease;
+    color: var(--sorella-navy);
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background-color: var(--warm-cocoa);
-    color: var(--white);
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
 }
 
-/* --- Menu Grid --- */
+/* --- Menu Grid & Live Asset Integration --- */
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -264,7 +233,7 @@ button {
 }
 
 .menu-item {
-    background-color: var(--cream-base);
+    background-color: var(--off-white);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.04);
@@ -276,19 +245,25 @@ button {
     transform: translateY(-5px);
 }
 
-/* Placeholder Image Blocks (To be replaced with real images later) */
-.item-image {
+/* Base styling for all image containers */
+.item-image, .course-image, .story-image {
     width: 100%;
-    height: 250px;
-    background-color: var(--blush-pink);
-    border-bottom: 3px solid var(--warm-cocoa);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--sorella-cream); /* Fallback */
 }
 
-/* Gradient placeholders to simulate premium photography depth */
-.signature-1 { background: linear-gradient(135deg, #F4DCD6, #e3c4bc); }
-.signature-2 { background: linear-gradient(135deg, #4A3728, #2a1f16); }
-.signature-3 { background: linear-gradient(135deg, #D2E7D6, #b0cdb5); }
-.signature-4 { background: linear-gradient(135deg, #FFFDF9, #e8dfd3); }
+.item-image {
+    height: 250px;
+    border-bottom: 3px solid var(--sorella-navy);
+}
+
+/* Live Image Mappings from 'images' folder */
+.signature-1 { background-image: url('images/cake1.png'); }
+.signature-2 { background-image: url('images/roll.png'); }
+.signature-3 { background-image: url('images/tiramisu.png'); }
+.signature-4 { background-image: url('images/cake2.png'); }
 
 .item-details {
     padding: 1.5rem;
@@ -301,37 +276,25 @@ button {
 
 .item-details p {
     font-size: 0.95rem;
-    color: #555;
+    color: #4a5c6e;
     margin-bottom: 1rem;
-    min-height: 45px; /* Aligns pricing tags */
+    min-height: 45px;
 }
 
 .price {
     display: inline-block;
     font-weight: 700;
-    color: var(--warm-cocoa);
-    background-color: var(--blush-pink);
+    color: var(--sorella-navy);
+    background-color: var(--sorella-cream);
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-size: 0.85rem;
 }
 
-/* --- Desktop Grid Scaling --- */
-@media (min-width: 768px) {
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width: 1024px) {
-    .menu-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 /* --- Baking Academy Section --- */
 .academy-registration {
     padding: 4rem 1.5rem;
-    background-color: var(--blush-pink);
+    background-color: var(--sorella-cream);
     text-align: center;
 }
 
@@ -341,14 +304,14 @@ button {
     overflow: hidden;
     max-width: 800px;
     margin: 0 auto 3rem auto;
-    box-shadow: 0 8px 25px rgba(74, 55, 40, 0.1);
+    box-shadow: 0 8px 25px rgba(11, 36, 59, 0.1);
     text-align: left;
 }
 
+/* Live Academy Action Shot */
 .course-image {
-    width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, #e3c4bc, #4A3728);
+    background-image: url('images/cake3.png'); 
 }
 
 .course-content {
@@ -358,7 +321,6 @@ button {
 .course-content h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    color: var(--warm-cocoa);
 }
 
 .curriculum {
@@ -369,7 +331,7 @@ button {
 .curriculum li {
     margin-bottom: 0.5rem;
     font-size: 1rem;
-    border-left: 3px solid var(--warm-cocoa);
+    border-left: 3px solid var(--cookie-brown);
     padding-left: 10px;
 }
 
@@ -392,7 +354,6 @@ button {
 .course-price {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--warm-cocoa);
 }
 
 .course-price small {
@@ -418,9 +379,9 @@ button {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 55, 40, 0.4); }
-    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(74, 55, 40, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 55, 40, 0); }
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(11, 36, 59, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(11, 36, 59, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(11, 36, 59, 0); }
 }
 
 /* Testimonial */
@@ -433,7 +394,6 @@ button {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
     font-style: italic;
-    color: var(--warm-cocoa);
     margin-bottom: 1rem;
     line-height: 1.5;
 }
@@ -443,22 +403,11 @@ button {
     font-size: 1rem;
 }
 
-/* Desktop Scaling */
-@media (min-width: 768px) {
-    .course-card {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr;
-    }
-    .course-image {
-        height: 100%;
-    }
-}
-
 /* --- Our Story Section --- */
 .our-story {
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: var(--off-white);
 }
 
 .story-content {
@@ -468,29 +417,27 @@ button {
 
 .story-content h2 {
     font-size: 2.2rem;
-    color: var(--warm-cocoa);
     margin-bottom: 1.5rem;
 }
 
 .story-content p {
     font-size: 1.1rem;
-    color: #555;
+    color: #4a5c6e;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.8;
 }
 
+/* Live Our Story Hands-on Shot */
 .story-image {
-    width: 100%;
     height: 300px;
-    /* Sage minimalist hint for contrast */
-    background: linear-gradient(135deg, #D2E7D6, #b0cdb5); 
+    background-image: url('images/brownie.png'); 
 }
 
 /* --- Smart Footer Ecosystem --- */
 .site-footer {
-    background-color: var(--warm-cocoa);
-    color: var(--blush-pink);
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
     padding: 4rem 1.5rem 2rem 1.5rem;
     text-align: left;
 }
@@ -504,7 +451,7 @@ button {
 }
 
 .footer-brand .logo {
-    color: var(--blush-pink);
+    color: var(--sorella-cream);
     margin-bottom: 0.5rem;
 }
 
@@ -516,7 +463,7 @@ button {
 }
 
 .footer-grid p, .footer-grid a {
-    color: #e3c4bc;
+    color: #cbd5e1;
     font-size: 0.95rem;
     text-decoration: none;
     margin-bottom: 0.5rem;
@@ -524,19 +471,71 @@ button {
 }
 
 .footer-grid a:hover {
-    color: var(--white);
+    color: var(--sorella-cream);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(244, 220, 214, 0.2);
+    border-top: 1px solid rgba(243, 220, 188, 0.2);
     font-size: 0.85rem;
-    color: #e3c4bc;
+    color: #cbd5e1;
 }
 
-/* --- Desktop Scaling --- */
+/* --- Floating WhatsApp Button --- */
+.floating-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-wa:hover {
+    transform: scale(1.05);
+}
+
+/* --- High-End Scroll Animations --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- Desktop Scaling Media Queries --- */
 @media (min-width: 768px) {
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .dual-experience {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course-card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+    }
+    .course-image {
+        height: 100%;
+    }
     .our-story {
         flex-direction: row;
         align-items: center;
@@ -555,5 +554,11 @@ button {
     }
     .footer-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

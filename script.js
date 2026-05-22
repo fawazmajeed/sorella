@@ -41,4 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Scroll Reveal Animation ---
+    // Target all major cards and sections to fade in dynamically
+    const sectionsToAnimate = document.querySelectorAll('.card, .menu-item, .course-card, .story-content');
+    
+    // Add the starting class
+    sectionsToAnimate.forEach(sec => sec.classList.add('fade-in-section'));
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Triggers when 15% of the item is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    sectionsToAnimate.forEach(sec => {
+        observer.observe(sec);
+    });
+
 });
