@@ -1,0 +1,604 @@
+/* ==========================================================
+   SORELLA CUISINE - MVP STYLESHEET
+   Theme: Midnight Navy & Cream (Bespoke Brand Palette)
+   ========================================================== */
+
+/* --- CSS Variables & Reset --- */
+:root {
+    --sorella-navy: #0B243B;   
+    --sorella-cream: #F3DCBC;  
+    --cookie-brown: #A0643B;   
+    --white: #FFFFFF;
+    --off-white: #FAFAFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    background-color: var(--off-white);
+    color: var(--sorella-navy);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--sorella-navy);
+}
+
+/* --- Header & Navigation (Grid Architecture) --- */
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+    padding: 0.5rem 1.5rem; /* Tighter padding for perfect logo alignment */
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    height: 65px; /* Aligned beautifully with the ribbon scale */
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem); /* Fixed clamping bug */
+    font-weight: 700;
+    color: var(--sorella-cream);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.header-right button {
+    background: none;
+    border: none;
+    color: var(--sorella-cream);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* --- Mobile Navigation --- */
+.mobile-nav {
+    display: none;
+    background-color: var(--off-white);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 0.8rem 0;
+    color: var(--sorella-navy);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--sorella-cream);
+    color: var(--sorella-navy);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--sorella-navy);
+    border: 2px solid var(--sorella-navy);
+}
+
+.btn-card {
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
+    margin-top: 1.5rem;
+}
+
+/* --- Dual Experience Cards --- */
+.dual-experience {
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background-color: var(--off-white);
+}
+
+.card {
+    background-color: var(--white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(11, 36, 59, 0.05);
+    border-top: 4px solid var(--cookie-brown);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+/* --- Value Density --- */
+.value-density {
+    background-color: var(--cookie-brown);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.value-density h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* --- Artisanal Menu Gallery --- */
+.menu-gallery {
+    padding: 4rem 1.5rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #4a5c6e;
+}
+
+/* --- Filter Buttons --- */
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--sorella-navy);
+    border-radius: 20px;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: var(--sorella-navy);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
+}
+
+/* --- Menu Grid & Live Asset Integration --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: var(--off-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.item-image, .course-image, .story-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--sorella-cream);
+}
+
+.item-image {
+    height: 250px;
+    border-bottom: 3px solid var(--sorella-navy);
+}
+
+/* Live Image Mappings */
+.signature-1 { background-image: url('images/cake1.png'); }
+.signature-2 { background-image: url('images/roll.png'); }
+.signature-3 { background-image: url('images/tiramisu.png'); }
+.signature-4 { background-image: url('images/cake2.png'); }
+
+.item-details {
+    padding: 1.5rem;
+}
+
+.item-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.item-details p {
+    font-size: 0.95rem;
+    color: #4a5c6e;
+    margin-bottom: 1rem;
+    min-height: 45px;
+}
+
+.price {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--sorella-navy);
+    background-color: var(--sorella-cream);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* --- Baking Academy Section --- */
+.academy-registration {
+    padding: 4rem 1.5rem;
+    background-color: var(--sorella-cream);
+    text-align: center;
+}
+
+.course-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 8px 25px rgba(11, 36, 59, 0.1);
+    text-align: left;
+}
+
+.course-image {
+    height: 300px;
+    background-image: url('images/cake3.png'); 
+}
+
+.course-content {
+    padding: 2.5rem;
+}
+
+.course-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.curriculum {
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+}
+
+.curriculum li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--cookie-brown);
+    padding-left: 10px;
+}
+
+.course-includes {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.course-booking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.course-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.course-price small {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.urgency-tag {
+    background-color: #ffece8;
+    color: #d94325;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Pulsing CTA Button */
+.pulse-btn {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(11, 36, 59, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(11, 36, 59, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(11, 36, 59, 0); }
+}
+
+/* Testimonial */
+.testimonial-block {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-block blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.testimonial-block cite {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* --- Our Story Section --- */
+.our-story {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--off-white);
+}
+
+.story-content {
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.story-content h2 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.story-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4a5c6e;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.story-image {
+    height: 300px;
+    background-image: url('images/brownie.png'); 
+}
+
+/* --- Smart Footer Ecosystem --- */
+.site-footer {
+    background-color: var(--sorella-navy);
+    color: var(--sorella-cream);
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    text-align: left;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+}
+
+.footer-brand .logo {
+    color: var(--sorella-cream);
+    margin-bottom: 0.5rem;
+}
+
+.footer-grid h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.footer-grid p, .footer-grid a {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-grid a:hover {
+    color: var(--sorella-cream);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(243, 220, 188, 0.2);
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+/* --- Floating WhatsApp Button --- */
+.floating-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-wa:hover {
+    transform: scale(1.05);
+}
+
+/* --- High-End Scroll Animations --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- Desktop Scaling Media Queries --- */
+@media (min-width: 768px) {
+    .hero-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .dual-experience {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course-card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+    }
+    .course-image {
+        height: 100%;
+    }
+    .our-story {
+        flex-direction: row;
+        align-items: center;
+    }
+    .story-content {
+        flex: 1;
+        padding: 5rem;
+        text-align: left;
+    }
+    .story-content p {
+        margin: 0;
+    }
+    .story-image {
+        flex: 1;
+        height: 500px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
