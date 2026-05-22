@@ -3,184 +3,562 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorella Cuisine | Artisanal Bakery & Baking Academy Pazhangadi</title>
+    <meta name="theme-color" content="#2E1C14">
+    <title>Sorella Cuisine | Artisanal Bakery &amp; Baking Academy — Kannur, Kerala</title>
     <meta name="description" content="Indulge in premium, custom-designed celebration cakes and French pastries handcrafted in Pazhangadi. Join our certified, hands-on baking masterclasses today.">
-    
+    <meta property="og:title" content="Sorella Cuisine | Artisanal Bakery &amp; Baking Academy">
+    <meta property="og:description" content="Handcrafted premium cakes &amp; French pastries in Kannur. Two locations — Secura Mall &amp; Mottambram Workshop.">
+    <meta property="og:image" content="./images/cake1.png">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="image" href="./images/cake1.png">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "Sorella Cuisine",
+        "description": "Artisanal bakery and baking academy in Kannur, Kerala",
+        "telephone": "+918089119877",
+        "openingHours": "Mo-Su 09:30-18:30",
+        "priceRange": "₹₹",
+        "servesCuisine": ["Bakery", "Patisserie"],
+        "sameAs": ["https://www.instagram.com/sorella_cuisine/"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Secura Centre, Thazhe Chova",
+            "addressLocality": "Kannur",
+            "addressRegion": "Kerala",
+            "addressCountry": "IN"
+        }
+    }
+    </script>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-left">
-            <a href="#" class="logo-link">
-                <img src="./images/logo.jpg" alt="Sorella Cuisine Logo" class="brand-logo">
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- ANNOUNCEMENT TICKER -->
+<div class="announcement-bar" aria-hidden="true">
+    <div class="ticker-track">
+        <div class="ticker-content">
+            <span>🎂 New Masterclass Dates Released — Reserve Your Station</span>
+            <span>✨ Boutique Outlet Now Open at Secura Mall, Kannur</span>
+            <span>🏠 Production &amp; Workshop Hub at Mottambram, Pazhangadi</span>
+            <span>🌿 Zero Preservatives · 100% Handcrafted · Certified Chefs</span>
+            <span>📸 Follow @sorella_cuisine for Daily Baking Reels</span>
+            <span>🎂 New Masterclass Dates Released — Reserve Your Station</span>
+            <span>✨ Boutique Outlet Now Open at Secura Mall, Kannur</span>
+            <span>🏠 Production &amp; Workshop Hub at Mottambram, Pazhangadi</span>
+            <span>🌿 Zero Preservatives · 100% Handcrafted · Certified Chefs</span>
+            <span>📸 Follow @sorella_cuisine for Daily Baking Reels</span>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <a href="#home" class="logo-link">
+            <img src="./images/logo.jpg" alt="Sorella Cuisine Logo" class="brand-logo">
+            <span class="brand-name">Sorella Cuisine</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+            <a href="#menu">Menu</a>
+            <a href="#academy">Academy</a>
+            <a href="#locations">Locations</a>
+            <a href="#story">Our Story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20have%20an%20inquiry." target="_blank" rel="noopener" class="wa-header-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Order Now
             </a>
+            <button class="hamburger" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        
-        <div class="header-center">
-            <span class="brand-text">Sorella Cuisine</span>
-        </div>
-        
-        <div class="header-right">
-            <button class="cart-btn">🛍️</button>
-            <button class="hamburger" id="mobile-menu-btn">☰</button>
-        </div>
-    </header>
+    </div>
+</header>
 
-    <nav class="mobile-nav" id="mobile-nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#menu">The Boutique Bakery</a></li>
-            <li><a href="#academy">The Baking Academy</a></li>
-            <li><a href="#story">Our Story</a></li>
-            <li><a href="#contact">Contact</a></li>
+<!-- MOBILE NAV -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+    <div class="nav-brand">Sorella Cuisine</div>
+    <ul>
+        <li><a href="#home" data-nav-link>Home</a></li>
+        <li><a href="#menu" data-nav-link>The Boutique Bakery</a></li>
+        <li><a href="#academy" data-nav-link>The Baking Academy</a></li>
+        <li><a href="#locations" data-nav-link>Our Locations</a></li>
+        <li><a href="#story" data-nav-link>Our Story</a></li>
+        <li><a href="#contact" data-nav-link>Contact</a></li>
+    </ul>
+    <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20have%20an%20inquiry." target="_blank" rel="noopener" class="nav-wa-btn">
+        💬 Chat on WhatsApp
+    </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Hero banner">
+    <div class="hero-content">
+        <span class="hero-eyebrow">Kannur's Premier Artisanal Bakery</span>
+        <h1 class="hero-title">Baking Dreams<br>Into Reality.</h1>
+        <p class="hero-sub">Handcrafted premium cakes for life's beautiful milestones — refined by French pastry technique, rooted in Malabar warmth.</p>
+        <div class="hero-actions">
+            <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20want%20to%20book%20a%20Masterclass." target="_blank" rel="noopener" class="btn btn-hero-primary">Book a Masterclass</a>
+            <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20want%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener" class="btn btn-hero-secondary">Order a Custom Cake</a>
+        </div>
+        <div class="hero-badges">
+            <span class="hero-badge">🌿 Zero Preservatives</span>
+            <span class="hero-badge">🏆 Certified Chefs</span>
+            <span class="hero-badge">📍 2 Locations</span>
+        </div>
+    </div>
+    <div class="hero-scroll-cue" aria-hidden="true">
+        <span>Explore</span>
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar" aria-label="Key statistics">
+    <div class="stat-item">
+        <div class="stat-num-row">
+            <span class="stat-num" data-target="500">0</span><span class="stat-sfx">+</span>
+        </div>
+        <span class="stat-lbl">Cakes Crafted</span>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num-row">
+            <span class="stat-num">5.0</span><span class="stat-sfx"> ★</span>
+        </div>
+        <span class="stat-lbl">Google Rating</span>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num-row">
+            <span class="stat-num" data-target="200">0</span><span class="stat-sfx">+</span>
+        </div>
+        <span class="stat-lbl">Students Trained</span>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num-row">
+            <span class="stat-num" data-target="2">0</span>
+        </div>
+        <span class="stat-lbl">Kannur Locations</span>
+    </div>
+</section>
+
+<!-- PORTFOLIO GALLERY -->
+<section class="menu-gallery" id="menu">
+    <div class="section-header">
+        <span class="eyebrow">Our Creations</span>
+        <h2>The Artisanal Portfolio</h2>
+        <p>Handcrafted with local love, refined by French pastry technique.</p>
+    </div>
+
+    <div class="menu-filters" role="group" aria-label="Filter menu items">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="signature">Signature Cakes</button>
+        <button class="filter-btn" data-filter="pastries">Pastries</button>
+        <button class="filter-btn" data-filter="bakes">Artisan Bakes</button>
+    </div>
+
+    <div class="menu-grid horizontal-scroll-mobile" id="menu-grid">
+
+        <div class="menu-item" data-category="signature">
+            <div class="item-img-wrap">
+                <div class="item-image bg-cake1"></div>
+                <span class="item-tag">Signature</span>
+            </div>
+            <div class="item-details">
+                <h3>Vintage Ribbon Cake</h3>
+                <p>Bespoke structural design with premium buttercream draping &amp; artisan ribbon work.</p>
+                <div class="item-footer">
+                    <span class="price-tag">Custom Pricing</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20a%20Vintage%20Ribbon%20Cake." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="signature">
+            <div class="item-img-wrap">
+                <div class="item-image bg-cake2"></div>
+                <span class="item-tag">Popular</span>
+            </div>
+            <div class="item-details">
+                <h3>Layered Celebration Cake</h3>
+                <p>Multi-tier festive masterpiece with custom flavour pairings and premium decoration.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹1,500/kg</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20a%20Celebration%20Cake." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="signature">
+            <div class="item-img-wrap">
+                <div class="item-image bg-cake3"></div>
+                <span class="item-tag">Chef's Pick</span>
+            </div>
+            <div class="item-details">
+                <h3>Tender Coconut Gateau</h3>
+                <p>Signature fresh coconut cream layers with a delicate sponge infused with local flavours.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹2,000/kg</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20a%20Tender%20Coconut%20Gateau." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="pastries">
+            <div class="item-img-wrap">
+                <div class="item-image bg-roll"></div>
+                <span class="item-tag">Fan Favourite</span>
+            </div>
+            <div class="item-details">
+                <h3>Cherry Swiss Roll</h3>
+                <p>Light sponge with artisan hand-painted cherry motif and silky cream filling.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹800/roll</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20Swiss%20Rolls." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="pastries">
+            <div class="item-img-wrap">
+                <div class="item-image bg-tiramisu"></div>
+                <span class="item-tag">Elegant</span>
+            </div>
+            <div class="item-details">
+                <h3>Petite Tiramisu Boxes</h3>
+                <p>Individual dessert boxes with authentic espresso-soaked layers, tied with signature ribbon.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹250/box</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20Tiramisu%20Boxes." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="pastries">
+            <div class="item-img-wrap">
+                <div class="item-image bg-donut"></div>
+                <span class="item-tag">Italian Classic</span>
+            </div>
+            <div class="item-details">
+                <h3>Premium Bomboloni</h3>
+                <p>Soft Italian doughnuts filled with artisan custard, Nutella, or seasonal fruit compote.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹120/piece</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20Bomboloni." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="bakes">
+            <div class="item-img-wrap">
+                <div class="item-image bg-brownie"></div>
+                <span class="item-tag">Daily Fresh</span>
+            </div>
+            <div class="item-details">
+                <h3>Belgian Chocolate Brownies</h3>
+                <p>Dense, fudgy single-origin Belgian chocolate brownies baked fresh every morning.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹80/piece</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20Belgian%20Brownies." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="bakes">
+            <div class="item-img-wrap">
+                <div class="item-image bg-buns"></div>
+                <span class="item-tag">Bakery Staple</span>
+            </div>
+            <div class="item-details">
+                <h3>Artisan Cream Buns</h3>
+                <p>Pillowy soft buns generously filled with whipped vanilla cream — a Sorella daily favourite.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹50/piece</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20Cream%20Buns." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-item" data-category="bakes">
+            <div class="item-img-wrap">
+                <div class="item-image bg-cookies"></div>
+                <span class="item-tag">New Arrival</span>
+            </div>
+            <div class="item-details">
+                <h3>Artisan Butter Cookies</h3>
+                <p>Melt-in-your-mouth European-style butter cookies — perfect for gifting or afternoon indulgence.</p>
+                <div class="item-footer">
+                    <span class="price-tag">From ₹60/piece</span>
+                    <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20order%20Butter%20Cookies." target="_blank" rel="noopener" class="order-link">Order →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gallery-cta">
+        <p>Every dessert dream is possible. Let's create yours.</p>
+        <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20have%20a%20custom%20dessert%20request." target="_blank" rel="noopener" class="btn btn-outline">Request a Custom Creation →</a>
+    </div>
+</section>
+
+<!-- DUAL EXPERIENCE -->
+<section class="dual-experience" aria-label="Our two offerings">
+    <div class="exp-card exp-bakery">
+        <div class="exp-icon" aria-hidden="true">🎂</div>
+        <h2>Boutique Bakery</h2>
+        <p>Gourmet custom cakes, French pastries, and artisan daily bakes — available at our Secura Mall outlet or delivered to your door.</p>
+        <ul class="exp-list">
+            <li>Custom Celebration Cakes</li>
+            <li>Fresh Daily Pastries</li>
+            <li>Premium Gifting Boxes</li>
         </ul>
-    </nav>
+        <a href="#menu" class="btn btn-exp">Explore the Menu</a>
+    </div>
+    <div class="exp-card exp-academy">
+        <div class="exp-icon" aria-hidden="true">👩‍🍳</div>
+        <h2>Baking Academy</h2>
+        <p>Professional pastry certification at our Mottambram workshop — empowering women to turn passion into a thriving enterprise.</p>
+        <ul class="exp-list">
+            <li>Weekend Masterclasses</li>
+            <li>Professional Certification</li>
+            <li>Community Mentorship</li>
+        </ul>
+        <a href="#academy" class="btn btn-exp">View Class Schedule</a>
+    </div>
+</section>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Baking Dreams Into Reality.</h1>
-            <p>Handcrafted premium cakes for life's beautiful milestones and professional baking masterclasses designed to empower.</p>
-            <div class="hero-actions">
-                <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I_want_to_book_a_Masterclass." target="_blank" class="btn btn-primary">Book a Masterclass</a>
-                <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I_want_to_book_a_cake." target="_blank" class="btn btn-secondary">Order a Custom Cake</a>
-            </div>
+<!-- WHY SORELLA -->
+<section class="why-sorella">
+    <div class="section-header">
+        <span class="eyebrow">The Sorella Standard</span>
+        <h2>Why Families Choose Us</h2>
+    </div>
+    <div class="pillars-grid">
+        <div class="pillar-card reveal">
+            <div class="pillar-icon" aria-hidden="true">🌿</div>
+            <h3>Zero Preservatives</h3>
+            <p>Every item baked fresh from scratch — no shortcuts, no compromise on quality.</p>
         </div>
-    </section>
+        <div class="pillar-card reveal reveal-d1">
+            <div class="pillar-icon" aria-hidden="true">🏆</div>
+            <h3>Certified Craft</h3>
+            <p>French pastry-trained chefs bringing world-class precision to every Kannur table.</p>
+        </div>
+        <div class="pillar-card reveal reveal-d2">
+            <div class="pillar-icon" aria-hidden="true">👭</div>
+            <h3>Women Empowered</h3>
+            <p>Sorella means sisterhood. We've launched 200+ women into successful home baking careers.</p>
+        </div>
+    </div>
+</section>
 
-    <section class="menu-gallery" id="menu">
-        <div class="section-header">
-            <h2>The Artisanal Portfolio</h2>
-            <p>Handcrafted with local love, refined by French pastry technique.</p>
-        </div>
-        
-        <div class="menu-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="signature">Cakes</button>
-            <button class="filter-btn" data-filter="pastries">Pastries</button>
-        </div>
+<!-- BAKING ACADEMY -->
+<section class="academy-section" id="academy">
+    <div class="section-header">
+        <span class="eyebrow">The Baking Academy</span>
+        <h2>Learn Professional Pastry.</h2>
+        <p>"Turn your kitchen into a thriving creative enterprise."</p>
+    </div>
 
-        <div class="menu-grid horizontal-scroll-mobile">
-            <div class="menu-item" data-category="signature">
-                <div class="item-image signature-1"></div>
-                <div class="item-details">
-                    <h3>Vintage Ribbon Cake</h3>
-                    <p>Bespoke structural design with premium buttercream draping.</p>
-                    <span class="price">Custom Pricing</span>
-                </div>
-            </div>
-            <div class="menu-item" data-category="pastries">
-                <div class="item-image signature-2"></div>
-                <div class="item-details">
-                    <h3>Cherry Motif Swiss Roll</h3>
-                    <p>Light sponge with artisan hand-painted cherry detailing.</p>
-                    <span class="price">From ₹800/roll</span>
-                </div>
-            </div>
-            <div class="menu-item" data-category="pastries">
-                <div class="item-image signature-3"></div>
-                <div class="item-details">
-                    <h3>Petite Tiramisu Boxes</h3>
-                    <p>Elegant, individual dessert boxes tied with signature ribbon.</p>
-                    <span class="price">From ₹250/box</span>
-                </div>
-            </div>
-            <div class="menu-item" data-category="pastries">
-                <div class="item-image signature-4"></div>
-                <div class="item-details">
-                    <h3>Premium Bomboloni</h3>
-                    <p>Soft Italian doughnuts generously filled with artisan creams.</p>
-                    <span class="price">From ₹120/piece</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dual-experience">
-        <div class="card bakery-card">
-            <h2>Boutique Bakery</h2>
-            <p>Gourmet cakes, macarons, and tarts.</p>
-            <a href="#menu" class="btn btn-card">Explore Menu</a>
-        </div>
-        <div class="card academy-card">
-            <h2>Baking Academy</h2>
-            <p>Learn pastry techniques in real-time.</p>
-            <a href="#academy" class="btn btn-card">View Classes</a>
-        </div>
-    </section>
-
-    <section class="value-density">
-        <h3>A complete service catalogue in a single visit:</h3>
-        <p>Every cake is baked from scratch with zero preservatives. Every class provides lifetime access to a supportive community of home baking entrepreneurs.</p>
-    </section>
-
-    <section class="academy-registration" id="academy">
-        <div class="section-header">
-            <h2>Learn Professional Pastry.</h2>
-            <p>"Turn your kitchen into a thriving creative enterprise."</p>
-        </div>
-
-        <div class="course-card">
+    <div class="course-card reveal">
+        <div class="course-img-col">
             <div class="course-image"></div>
-            <div class="course-content">
+            <div class="course-badge">🎓 Certified Program</div>
+        </div>
+        <div class="course-content">
+            <div class="course-title-row">
                 <h3>2-Day Intensive Cake Masterclass</h3>
-                <ul class="curriculum">
-                    <li><strong>Day 1:</strong> Sponge mechanics, flavor chemistry, precision slicing.</li>
-                    <li><strong>Day 2:</strong> Contemporary buttercream palette knife styling & stacking.</li>
-                </ul>
-                <p class="course-includes">Includes: Ingredients, premium toolkit, lunch, and Certification.</p>
-                <div class="course-booking">
-                    <span class="course-price">₹4,999 <small>(All-Inclusive)</small></span>
-                    <span class="urgency-tag">Only 3 Stations Left!</span>
+                <span class="urgency-tag" aria-live="polite">Only 3 Stations Left!</span>
+            </div>
+            <p class="course-loc">📍 Mottambram, Pazhangadi, Kannur</p>
+            <ul class="curriculum">
+                <li>
+                    <span class="day-chip">Day 1</span>
+                    Sponge mechanics, flavour chemistry &amp; precision slicing techniques.
+                </li>
+                <li>
+                    <span class="day-chip">Day 2</span>
+                    Contemporary buttercream palette knife styling &amp; structural stacking.
+                </li>
+            </ul>
+            <div class="includes-row">
+                <span class="chip">🥚 Ingredients</span>
+                <span class="chip">🛠️ Toolkit</span>
+                <span class="chip">🍽️ Lunch</span>
+                <span class="chip">📜 Certificate</span>
+            </div>
+            <div class="course-footer">
+                <div class="price-block">
+                    <span class="course-price">₹4,999</span>
+                    <span class="course-price-note">All-Inclusive</span>
                 </div>
-                <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20want%20to%20reserve%20my%20baking%20station%20for%20the%20Masterclass." target="_blank" class="btn btn-primary pulse-btn">>> Reserve My Station Now</a>
+                <a href="https://wa.me/918089119877?text=Hi%20Sorella!%20I%20want%20to%20reserve%20my%20baking%20station%20for%20the%20Masterclass." target="_blank" rel="noopener" class="btn btn-reserve pulse-btn">
+                    Reserve My Station Now →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonial-block" id="testimonial-carousel">
+        <div class="t-slide t-active">
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+            <blockquote>"Sorella didn't just teach me to frost a cake — they gave me the confidence to launch my own home business in Payyanur!"</blockquote>
+            <cite>— Shreya K., Payyanur</cite>
+        </div>
+        <div class="t-slide">
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+            <blockquote>"The 2-day masterclass was a life-changer. I'm now taking 15+ orders a month from home!"</blockquote>
+            <cite>— Fathima A., Madayi</cite>
+        </div>
+        <div class="t-slide">
+            <div class="t-stars" aria-label="5 stars">★★★★★</div>
+            <blockquote>"The level of detail in every cake is unmatched. My wedding cake was absolutely breathtaking!"</blockquote>
+            <cite>— Reshma T., Kannur</cite>
+        </div>
+        <div class="t-dots" id="t-dots">
+            <button class="t-dot t-dot-active" data-slide="0" aria-label="Testimonial 1"></button>
+            <button class="t-dot" data-slide="1" aria-label="Testimonial 2"></button>
+            <button class="t-dot" data-slide="2" aria-label="Testimonial 3"></button>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations-section" id="locations">
+    <div class="section-header">
+        <span class="eyebrow">Find Us</span>
+        <h2>Our Two Locations</h2>
+        <p>Two distinct spaces crafted for two distinct experiences.</p>
+    </div>
+    <div class="locations-grid">
+
+        <div class="loc-card reveal">
+            <div class="loc-img loc-boutique"></div>
+            <div class="loc-body">
+                <span class="loc-type">🛍️ Boutique Outlet</span>
+                <h3>Secura Centre, Kannur</h3>
+                <p class="loc-addr">Thazhe Chova, Secura Centre<br>Kannur, Kerala</p>
+                <p class="loc-hours">⏰ Open Daily: 9:30 AM – 6:30 PM</p>
+                <ul class="loc-list">
+                    <li>Walk-in cake collection</li>
+                    <li>Daily fresh pastry counter</li>
+                    <li>Custom cake consultations</li>
+                </ul>
+                <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20visit%20the%20Secura%20outlet." target="_blank" rel="noopener" class="btn btn-loc">Get Directions →</a>
             </div>
         </div>
 
-        <div class="testimonial-block">
-            <blockquote>"Sorella gave me the absolute confidence to launch my own home business in Payyanur!"</blockquote>
-            <cite>— Shreya K.</cite>
-        </div>
-    </section>
-
-    <section class="our-story" id="story">
-        <div class="story-content">
-            <h2>Sisterhood & Craftsmanship.</h2>
-            <p><strong>Sorella</strong> means sisterhood. Founded by local professional pastry chefs, our boutique bakery celebrates community and culinary excellence. We blend time-honored Malabar warmth with precise French pastry techniques, empowering women through our academy while delivering zero-preservative, handcrafted masterpieces to your table.</p>
-        </div>
-        <div class="story-image"></div> 
-    </section>
-
-    <footer class="site-footer" id="contact">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="logo">Sorella Cuisine</div>
-                <p>Baking dreams into edible realities.</p>
+        <div class="loc-card loc-featured reveal reveal-d1">
+            <div class="loc-img loc-workshop"></div>
+            <div class="loc-body">
+                <span class="loc-type">🏠 Production &amp; Academy Hub</span>
+                <h3>Mottambram, Pazhangadi</h3>
+                <p class="loc-addr">Mottambram, Pazhangadi Road<br>Kannur, Kerala</p>
+                <p class="loc-hours">⏰ Workshops: Weekends · 9:00 AM – 5:00 PM</p>
+                <ul class="loc-list">
+                    <li>Weekend baking masterclasses</li>
+                    <li>Private workshop bookings</li>
+                    <li>Production kitchen tours</li>
+                </ul>
+                <a href="https://wa.me/918089119877?text=Hi!%20I%20want%20to%20book%20a%20workshop%20at%20Mottambram." target="_blank" rel="noopener" class="btn btn-loc">Book a Workshop →</a>
             </div>
-            <div class="footer-contact">
-                <h4>Visit Us</h4>
+        </div>
+
+    </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="our-story" id="story">
+    <div class="story-img-col">
+        <div class="story-image" role="img" aria-label="Sorella production kitchen"></div>
+    </div>
+    <div class="story-content reveal">
+        <span class="eyebrow eyebrow-light">Our Story</span>
+        <h2>Sisterhood &amp;<br>Craftsmanship.</h2>
+        <p><strong>Sorella</strong> means sisterhood. Founded by passionate local pastry chefs, our boutique bakery celebrates community, craft, and culinary excellence in the heart of North Kerala.</p>
+        <p>We blend the time-honored warmth of Malabar's home kitchens with the precision of French pastry technique — creating zero-preservative, handcrafted masterpieces that tell a story in every slice.</p>
+        <p>Through our Baking Academy at Mottambram, we've empowered over 200 women across Kannur to transform their passion into a profession — one perfectly frosted cake at a time.</p>
+        <a href="https://www.instagram.com/sorella_cuisine/" target="_blank" rel="noopener noreferrer" class="btn btn-story">Follow Our Journey on Instagram →</a>
+    </div>
+</section>
+
+<!-- INSTAGRAM CTA -->
+<section class="insta-strip" aria-label="Instagram call to action">
+    <div class="insta-inner">
+        <span class="insta-icon" aria-hidden="true">📸</span>
+        <div class="insta-text">
+            <strong>Follow our sweet daily journey</strong>
+            <span>Cake reveals, class recaps &amp; behind-the-scenes baking magic</span>
+        </div>
+        <a href="https://www.instagram.com/sorella_cuisine/" target="_blank" rel="noopener noreferrer" class="btn btn-insta-strip">@sorella_cuisine</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="contact">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="./images/logo.jpg" alt="Sorella Cuisine" class="footer-logo">
+            <p class="footer-tagline">Baking dreams into edible realities.</p>
+            <p class="footer-phone">📞 +91 80891 19877</p>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/sorella_cuisine/" target="_blank" rel="noopener noreferrer" class="social-pill s-insta">Instagram</a>
+                <a href="https://wa.me/918089119877" target="_blank" rel="noopener" class="social-pill s-wa">WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="footer-locs">
+            <h4>Our Locations</h4>
+            <div class="floc">
+                <strong>Boutique Outlet</strong>
                 <p>Secura Centre, Thazhe Chova<br>Kannur, Kerala</p>
             </div>
-            <div class="footer-links">
-                <h4>Connect</h4>
-                <p><a href="https://wa.me/918089119877?text=Hi%20Sorella" target="_blank">WhatsApp Direct</a></p>
-                <p><a href="https://www.instagram.com/sorella_cuisine/" target="_blank" rel="noopener noreferrer">Instagram Portfolio</a></p>
-                <p><a href="#">Claim Google Business</a></p>
+            <div class="floc">
+                <strong>Production &amp; Academy</strong>
+                <p>Mottambram, Pazhangadi<br>Kannur, Kerala</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Sorella Cuisine. All Rights Reserved.</p>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#menu">The Bakery</a>
+            <a href="#academy">Baking Academy</a>
+            <a href="#locations">Our Locations</a>
+            <a href="#story">Our Story</a>
+            <a href="https://wa.me/918089119877" target="_blank" rel="noopener">WhatsApp Order</a>
+            <a href="https://www.instagram.com/sorella_cuisine/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
-    </footer>
+    </div>
 
-    <a href="https://wa.me/918089119877?text=Hello%20Sorella,%20I%20have%20an%20inquiry!" class="floating-wa" target="_blank">
-        💬 WhatsApp
-    </a>
+    <div class="footer-bottom">
+        <p>© 2026 Sorella Cuisine. All Rights Reserved. · Crafted with ♥ in Kannur, Kerala</p>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918089119877?text=Hello%20Sorella!%20I%20have%20an%20inquiry." class="floating-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>Chat to Order</span>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
