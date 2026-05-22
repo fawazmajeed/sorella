@@ -453,3 +453,107 @@ button {
         height: 100%;
     }
 }
+
+/* --- Our Story Section --- */
+.our-story {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+}
+
+.story-content {
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.story-content h2 {
+    font-size: 2.2rem;
+    color: var(--warm-cocoa);
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.story-image {
+    width: 100%;
+    height: 300px;
+    /* Sage minimalist hint for contrast */
+    background: linear-gradient(135deg, #D2E7D6, #b0cdb5); 
+}
+
+/* --- Smart Footer Ecosystem --- */
+.site-footer {
+    background-color: var(--warm-cocoa);
+    color: var(--blush-pink);
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    text-align: left;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+}
+
+.footer-brand .logo {
+    color: var(--blush-pink);
+    margin-bottom: 0.5rem;
+}
+
+.footer-grid h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.footer-grid p, .footer-grid a {
+    color: #e3c4bc;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-grid a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(244, 220, 214, 0.2);
+    font-size: 0.85rem;
+    color: #e3c4bc;
+}
+
+/* --- Desktop Scaling --- */
+@media (min-width: 768px) {
+    .our-story {
+        flex-direction: row;
+        align-items: center;
+    }
+    .story-content {
+        flex: 1;
+        padding: 5rem;
+        text-align: left;
+    }
+    .story-content p {
+        margin: 0;
+    }
+    .story-image {
+        flex: 1;
+        height: 500px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
